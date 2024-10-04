@@ -1,26 +1,20 @@
-const express = require("express");
+require('dotenv').config();
+const express = require('express');
+const authRoutes = require('../routes/login');
+const weatherRoutes = require('../routes/weather');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const userRoutes = require("../routes/users");
-const productRoutes = require("../routes/products");
-const orderRoutes = require("../routes/orders");
-const loginRouter = require("../routes/login");
-const { cookieJwtAuth } = require("../middleware/cookieJwtAuth");
+app.use('/login', authRoutes);
+app.use('/weather', weatherRoutes);
 
-app.use("/users", cookieJwtAuth, userRoutes);
-app.use("/products", cookieJwtAuth, productRoutes);
-app.use("/orders", cookieJwtAuth, orderRoutes);
-app.use("/login", loginRouter);
-
-app.use((req, res) => {
-  res.status(404).json({ message: "Ruta no encontrada" });
+// Manejo de rutas no definidas
+app.use((req, res, next) => {
+  res.status(404).json({ message: 'Endpoint no encontrado' });
 });
 
-app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
-
-module.exports = app;
