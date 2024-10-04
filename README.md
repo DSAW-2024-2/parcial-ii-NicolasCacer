@@ -2,7 +2,7 @@
 
 # Link desplegado
 *Validar en thunderclient porfavor*
-[https://parcial-ii-nicolas-cacer-3k2229dt4-nicolas-projects-b5df498b.vercel.app/](https://parcial-ii-nicolas-cacer-3k2229dt4-nicolas-projects-b5df498b.vercel.app/)
+[https://parcial-ii-nicolas-cacer.vercel.app/](https://parcial-ii-nicolas-cacer.vercel.app/)
 # Consultemos el clima
 
 Este proyecto consiste en un reto de desarrollo backend en el que debes crear una API REST utilizando el framework Express.js. El objetivo principal es que implementes un sistema de autenticación mediante token de sesión y un endpoint que consulte la API externa de Open Meteo para obtener la temperatura basándose en coordenadas geográficas.
