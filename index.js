@@ -1,9 +1,11 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const loginRouter = require('./routes/login');
 const weatherRouter = require('./routes/weather');
 const { authMiddleware } = require('./middleware/authMiddleware.js');
 const app = express();
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
