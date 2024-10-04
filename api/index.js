@@ -1,9 +1,9 @@
 require('dotenv').config();
 const cors = require('cors');
 const express = require('express');
-const loginRouter = require('./routes/login');
-const weatherRouter = require('./routes/weather');
-const { authMiddleware } = require('./middleware/authMiddleware.js');
+const loginRouter = require('../routes/login.js');
+const weatherRouter = require('../routes/weather.js');
+const { authMiddleware } = require('../middleware/authMiddleware.js');
 const app = express();
 app.use(cors());
 
