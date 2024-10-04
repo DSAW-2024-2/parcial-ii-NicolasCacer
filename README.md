@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Ihjz_szg)
 
 # Link desplegado
-*Validar en thundercliente porfavor*
+*Validar en thunderclient porfavor*
 [https://parcial-ii-nicolas-cacer-3k2229dt4-nicolas-projects-b5df498b.vercel.app/](https://parcial-ii-nicolas-cacer-3k2229dt4-nicolas-projects-b5df498b.vercel.app/)
 # Consultemos el clima
 
