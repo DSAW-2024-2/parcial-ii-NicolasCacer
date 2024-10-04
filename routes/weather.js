@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   const { latitude, longitude } = req.query;
 
   if (!latitude || !longitude) {
-    return res.status(400).json({ message: 'Latitud y longitud son requeridos' });
+    return res.status(400).json({ message: 'Latitude and longitude are required' });
   }
 
   try {
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
     const { temperature } = response.data.current_weather;
     return res.status(200).json({ temperature });
   } catch (error) {
-    res.status(500).json({ message: 'Error al obtener datos del clima' });
+    res.status(500).json({ message: 'Error al obtener datos del clima',errorType:error});
   }
 });
 
