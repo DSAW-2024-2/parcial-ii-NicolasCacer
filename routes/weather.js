@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     });
     
     const { temperature } = response.data.current_weather;
-    res.json({ temperature });
+    return res.status(200).json({ temperature });
   } catch (error) {
     res.status(500).json({ message: 'Error al obtener datos del clima' });
   }
